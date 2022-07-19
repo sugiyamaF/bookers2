@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'users/show'
   get 'users/edit'
-  get '/books' => 'books#new'
+  get 'books/new'
   root to: "homes#top"
   devise_for :users
 
