@@ -92,6 +92,7 @@ body {
 
 .bg-dark {
     background-color: #343a40!important;
+    height: 40px;
 }
 
 
@@ -140,6 +141,8 @@ a {
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
+    position: relative;
+    left: 30px;
 }
 
 
@@ -153,15 +156,17 @@ ul {
 
 
 li {
-
+    margin: 10px;
+    position: relative;
+    left: 850px;
+    bottom: 68px;
 }
 
 .navbar-nav {
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
+   display: flex;
+   padding-left: 0;
+   margin-bottom: 0;
+   list-style: none;
 }
 
 
@@ -196,3 +201,11 @@ a {
 .collapse navbar-collapse {
 
 }
+
+
+footer {
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
