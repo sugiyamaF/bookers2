@@ -1,7 +1,14 @@
 class BooksController < ApplicationController
 
-def new
+def index
 
 end
+
+def edit
+end
+
+def show
+end
+
 
 end
