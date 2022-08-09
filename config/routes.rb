@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'home/about' => 'homes#about'
   get 'books' => 'books#index'
   post 'books' => 'books#create'
+  get 'users/:id/edit', to: 'users#edit', as: 'edit_user'
   devise_for :users
 
   resources :users, only: [:index, :edit, :show]
