@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
   root to: "homes#top"
   get 'home/about' => 'homes#about'
-  get 'books' => 'books#index'
-  post 'books' => 'books#create'
-  get 'users/:id/edit' => 'users#edit',  as: 'edit_user'
-  post 'users/:id/edit' => 'users#edit'
+  
   devise_for :users
 
   resources :users, only: [:index, :show, :edit]

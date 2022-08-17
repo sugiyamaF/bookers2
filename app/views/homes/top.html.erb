@@ -29,8 +29,11 @@
             <% if user_signed_in? %>
 
           <li class="nav-link text-light">
-            <i class="fas fa-home"></i>
-            <%= link_to "Home", users_path, class:"text-light text-decoration-none" %>
+
+            <%= link_to users_path, class:"text-light text-decoration-none" do %>
+              <i class="fas fa-home"></i>
+              Home
+            <% end %>
           </li>
 
           <li class= "nav-link text-light">
