@@ -78,28 +78,35 @@
 
 
           <h2 class ="mt-3">New Book</h2>
-          <div class="form-group">
+
             <%= form_with model: @book, url: '/books', method: :post do |f| %>
-              <h4>Title</h4>
-              <%= f.text_field :title %>
+            <div class="form-group">
+              <label for="book_title">Title</label>
 
-              <h4>Opinion</h4>
-              <%= f.text_area :body %>
+              <%= f.text_field :title, class:"form-control book_title" %>
+            </div>
 
-              <%= f.submit '投稿' %>
+            <div class="form-group">
+              <label for="book_opinion">Opinion</label>
+              <%= f.text_area :body, class:"form-control book_body" %>
+            </div>
 
+            <div class="form-group">
+              <%= f.submit 'Create Book', class:"btn btn-success" %>
+            </div>
 
             <% end %>
 
-          </div>
+
 
         </div>
       </div>
     </div>
-  <% @books.each do |book| %>
 
-    <%= book.title %>
-  <% end %>
+    <% @books.each do |book| %>
+
+      <%= book.title %>
+    <% end %>
 
 
 
