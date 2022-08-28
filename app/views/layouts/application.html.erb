@@ -20,17 +20,15 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-          <div class ="row">
             <div class="collapse navbar-collapse">
               <ul class="navbar-nav ml-auto">
                 <% if user_signed_in? %>
                 <li class="nav-link text-light">
-                <%= link_to user_path(current_user.id), class:"text-light text-decoration-none" do %>
+                  <%= link_to user_path(current_user.id), class:"text-light text-decoration-none" do %>
                 <i class="fas fa-home"></i>
                 Home
                 <% end %>
                 </li>
-
                 <li class= "nav-link text-light">
                 <%= link_to users_path, class:"text-light text-decoration-none" do %>
                 <i class="fas fa-users"></i>
@@ -84,7 +82,7 @@
                 <% end %>
 
               </ul>
-            </div>
+
           </div>
         </div>
       </nav>
