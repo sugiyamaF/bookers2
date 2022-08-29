@@ -53,34 +53,23 @@
 
             <% end %>
         </div>
-        <h2>Bookdetail</h2>
-        <table class="table table-hover table-inverse">
-          <thead>
-            <tr>
-              <th>
-                Title
-              </th>
-              <th>
-                Opinion
-              </th>
-              <th colspan="3"></th>
-            </tr>
-          </thead>
-          <tbody>
-
+        <div class='col-md-8 offset-md-1'>
+          <h2>Bookdetail</h2>
+          <table class="table">
             <tr>
               <td>
                 <% if @book.user.image.attached? %>
                 <%= image_tag @book.user.image, size: "80x80" %>
                 <% else %>
                 <%= image_tag 'no_image', size: "80x80" %>
-                <% end %>
+                <% end %><br>
+                <%= link_to @book.user.name, user_path %>
               </td>
-              <td><%= @book.title %></td>
+              <td><%= link_to @book.title %></td>
               <td><%= @book.body %></td>
             </tr>
 
-          </tbody>
         </table>
+        </div>
       </div>
     </div>
