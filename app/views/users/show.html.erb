@@ -57,6 +57,7 @@
             </tr>
           </thead>
           <tbody>
+            <% @books.each do |book| %>
             <tr>
               <td>
                 <% if @user.image.attached? %>
@@ -65,9 +66,10 @@
                 <%= image_tag 'no_image', size: "80x80" %>
                 <% end %>
               </td>
-              <td><%= link_to @book.title %></td>
-              <td><%= @book.body %></td>
+              <td><%= link_to book.title %></td>
+              <td><%= book.body %></td>
             </tr>
+            <% end %>
           </tbody>
         </table>
     </div>
