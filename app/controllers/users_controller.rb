@@ -6,13 +6,6 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
-  def create
-    @user = User.new(user_params)
-    @user.user_id = current_user.id
-    @user.save
-    flash[:notice] = "You have created book successfully."
-    redirect_to books_path
-  end
 
   def show
     @user = User.find(params[:id])
@@ -38,3 +31,4 @@ class UsersController < ApplicationController
   end
 
 end
+
