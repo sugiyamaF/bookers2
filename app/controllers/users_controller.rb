@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.user_id = current_user.id
     @user.save
+    flash[:notice] = "You have created book successfully."
     redirect_to books_path
   end
 
@@ -26,6 +27,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
+    flash[:notice] = "You have updated user successfully."
     redirect_to user_path(@user.id)
   end
 
